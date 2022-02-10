@@ -1,0 +1,17 @@
+name: Labeling test
+on:
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    steps:
+      - name: Mark mergeable
+        run: gh pr edit "https://github.com/microcmsio/microcms-web/pull/1" --add-label "mergeable"
