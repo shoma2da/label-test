@@ -14,4 +14,4 @@ jobs:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - name: Mark mergeable
-        run: gh pr edit "https://github.com/microcmsio/microcms-web/pull/1" --add-label "mergeable"
+        run: gh pr edit "https://github.com/shoma2da/label-test/pull/1" --add-label "mergeable"
